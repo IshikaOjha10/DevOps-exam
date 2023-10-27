@@ -1,10 +1,160 @@
-<html>
-<head>
-<title>hello world>
-</title>
-</head>
-<body>
-<h1>Hello Welcome to DevOps</h1>
-</body>
-</html>
+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
+
+
+
+
+(base) [exam40@client51 Devops]$ echo"">abc.html
+(base) [exam40@client51 Devops]$ git add abc.html
+(base) [exam40@client51 Devops]$ git commit -m "initial commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <exam40@client51.pglab>) not allowed
+(base) [exam40@client51 Devops]$ git config --global user.name "IshikaOjha10"
+(base) [exam40@client51 Devops]$ git config --global user.email "ishikaojha104@gmail.com"
+(base) [exam40@client51 Devops]$ echo"">abc1.html
+(base) [exam40@client51 Devops]$ git add abc.html
+(base) [exam40@client51 Devops]$ git commit -m "initial commit"
+[master (root-commit) 865f1b5] initial commit
+ 1 file changed, 10 insertions(+)
+ create mode 100644 abc.html
+(base) [exam40@client51 Devops]$ git branch
+* master
+(base) [exam40@client51 Devops]$ git branch f1
+(base) [exam40@client51 Devops]$ git branch f2
+(base) [exam40@client51 Devops]$ git branch f3
+(base) [exam40@client51 Devops]$ git checkout f1
+Switched to branch 'f1'
+(base) [exam40@client51 Devops]$ echo"hello">hello.txt
+bash: echohello: command not found...
+(base) [exam40@client51 Devops]$ echo"hello">hello.txt
+bash: echohello: command not found...
+(base) [exam40@client51 Devops]$ echo "hello">hello.txt
+(base) [exam40@client51 Devops]$ git add hello.txt
+(base) [exam40@client51 Devops]$ git commit -m "changed in f1"
+[f1 40d9fae] changed in f1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+(base) [exam40@client51 Devops]$ git checkout master
+Switched to branch 'master'
+(base) [exam40@client51 Devops]$ git branch 
+  f1
+  f2
+  f3
+* master
+(base) [exam40@client51 Devops]$ git merge master
+Already up-to-date.
+(base) [exam40@client51 Devops]$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	abc1.html
+nothing added to commit but untracked files present (use "git add" to track)
+(base) [exam40@client51 Devops]$ git log
+commit 865f1b55b2b26296c004e47f37d05e0cac1dd44b
+Author: IshikaOjha10 <ishikaojha104@gmail.com>
+Date:   Fri Oct 27 13:20:19 2023 +0530
+
+    initial commit
+(base) [exam40@client51 Devops]$ git remote add origin https://github.com/IshikaOjha10/DevOps-exam.git
+(base) [exam40@client51 Devops]$ git push origin
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': IshikaOjha10
+Password for 'https://IshikaOjha10@github.com': 
+Everything up-to-date
+(base) [exam40@client51 Devops]$ git log
+commit 865f1b55b2b26296c004e47f37d05e0cac1dd44b
+Author: IshikaOjha10 <ishikaojha104@gmail.com>
+Date:   Fri Oct 27 13:20:19 2023 +0530
+
+    initial commit
+(base) [exam40@client51 Devops]$ git diff
+(base) [exam40@client51 Devops]$ git show
+commit 865f1b55b2b26296c004e47f37d05e0cac1dd44b
+Author: IshikaOjha10 <ishikaojha104@gmail.com>
+Date:   Fri Oct 27 13:20:19 2023 +0530
+
+    initial commit
+
+diff --git a/abc.html b/abc.html
+new file mode 100644
+index 0000000..9e4b089
+--- /dev/null
++++ b/abc.html
+@@ -0,0 +1,10 @@
++<html>
++<head>
++<title>hello world>
++</title>
++</head>
++<body>
++<h1>Hello Welcome to DevOps</h1>
++</body>
++</html>
++
+(base) [exam40@client51 Devops]$ git remote add origin https://github.com/IshikaOjha10/DevOps-exam.git
+fatal: remote origin already exists.
+(base) [exam40@client51 Devops]$ git pull origin
+warning: no common commits
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/IshikaOjha10/DevOps-exam
+ * [new branch]      main       -> origin/main
+You asked to pull from the remote 'origin', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+(base) [exam40@client51 Devops]$ git push origin
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': IshikaOjha10
+Password for 'https://IshikaOjha10@github.com': 
+fatal: Authentication failed for 'https://github.com/IshikaOjha10/DevOps-exam.git/'
+(base) [exam40@client51 Devops]$ git push origin main
+Username for 'https://github.com': IshikaOjha10
+Password for 'https://IshikaOjha10@github.com': 
+error: src refspec main does not match any.
+error: failed to push some refs to 'https://github.com/IshikaOjha10/DevOps-exam.git'
+(base) [exam40@client51 Devops]$ git clone https://github.com/IshikaOjha10/DevOps-exam.git
+Cloning into 'DevOps-exam'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+(base) [exam40@client51 Devops]$ git pull origin
 
